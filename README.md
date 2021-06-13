@@ -1,6 +1,7 @@
 # go-ping
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/go-ping/ping)](https://pkg.go.dev/github.com/go-ping/ping)
-[![Circle CI](https://circleci.com/gh/go-ping/ping.svg?style=svg)](https://circleci.com/gh/go-ping/ping)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/go-ping/ping)](https://pkg.go.dev/github.com/mathisve/ping)
+
+# Don't use this, this is just a fork because the original repo was broken!
 
 A simple but powerful ICMP echo (ping) library for Go, inspired by
 [go-fastping](https://github.com/tatsushid/go-fastping).
@@ -106,36 +107,6 @@ See [this blog](https://sturmflut.github.io/linux/ubuntu/2015/01/17/unprivileged
 and the Go [x/net/icmp](https://godoc.org/golang.org/x/net/icmp) package
 for more details.
 
-### Windows
-
-You must use `pinger.SetPrivileged(true)`, otherwise you will receive
-the following error:
-
-```
-socket: The requested protocol has not been configured into the system, or no implementation for it exists.
-```
-
-Despite the method name, this should work without the need to elevate
-privileges and has been tested on Windows 10. Please note that accessing
-packet TTL values is not supported due to limitations in the Go
-x/net/ipv4 and x/net/ipv6 packages.
-
-### Plan 9 from Bell Labs
-
-There is no support for Plan 9. This is because the entire `x/net/ipv4` 
-and `x/net/ipv6` packages are not implemented by the Go programming 
-language.
-
-## Maintainers and Getting Help:
-
-This repo was originally in the personal account of
-[sparrc](https://github.com/sparrc), but is now maintained by the
-[go-ping organization](https://github.com/go-ping).
-
-For support and help, you usually find us in the #go-ping channel of
-Gophers Slack. See https://invite.slack.golangbridge.org/ for an invite
-to the Gophers Slack org.
-
 ## Contributing
 
-Refer to [CONTRIBUTING.md](https://github.com/go-ping/ping/blob/master/CONTRIBUTING.md)
+Refer to [CONTRIBUTING.md](https://github.com/mathisve/ping/blob/master/CONTRIBUTING.md)
